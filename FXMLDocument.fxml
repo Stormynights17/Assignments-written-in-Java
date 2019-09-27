@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ojl8q7fxmlcpumonitor.FXMLDocumentController">
+   <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="bottomImg" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gauge.png" />
+               </image></ImageView>
+            <ImageView fx:id="topImg" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="-150.1">
+               <image>
+                  <Image url="@hand.png" />
+               </image></ImageView>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </StackPane>
+      <VBox fx:id="bigBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Text fx:id="usageLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="CPU Usage" />
+            <HBox fx:id="buttonBox" alignment="CENTER" spacing="20.0">
+               <children>
+                  <Button fx:id="recordBtn" mnemonicParsing="false" onAction="#onRecordButton" text="Record" />
+                  <Button fx:id="stopBtn" mnemonicParsing="false" onAction="#onStartButton" text="Start" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <ListView fx:id="listView" editable="true" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</VBox>
